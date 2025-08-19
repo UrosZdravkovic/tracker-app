@@ -53,7 +53,7 @@ export default function TableRow({ id, userId, lesson, time, category, status, o
                     disabled={isRemoving}
                 >
                     {isRemoving ? (
-                        <Spinner size={12} />
+                        <Spinner size={12} text={true} />
                     ) : (
                         <>
                             <FaTrash className={styles.icon} />
