@@ -1,0 +1,153 @@
+.tableWrapper {
+  overflow-x: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.table {
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #c6c7c9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+
+
+@media (max-width: 768px) {
+  .table {
+    width: 90%;
+  }
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  min-width: 150px;
+}
+
+.th {
+  background-color: #f9fafb;
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.empty {
+  padding: 1rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: none;
+}
+
+.button:hover {
+  background-color: #e5e7eb;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.icon {
+  font-size: 1rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.actionButtonSpan {
+  display: inline;
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortableContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* === ISPRAVLJENO: filterRow sada je poravnat levo bez margine === */
+.filterRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+/* === Input i Select === */
+.searchInput {
+  flex: 1;
+  max-width: 200px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  height: 40px;
+}
+
+.selectTrigger {
+  flex: 1;
+  max-width: 200px;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0 0.75rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* === Responsive === */
+@media (max-width: 450px) {
+  .actionButtonSpan {
+    display: none;
+  }
+
+  .button {
+    padding: 0.25rem;
+  }
+}

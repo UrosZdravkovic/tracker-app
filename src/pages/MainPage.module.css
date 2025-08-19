@@ -1,0 +1,38 @@
+.gridSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Medium screens: smanjuj širinu trećeg */
+@media (max-width: 1250px) {
+  .gridSection {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "category status"
+      "recent recent";
+  }
+
+  .gridSection > :nth-child(1) {
+    grid-area: category;
+  }
+
+  .gridSection > :nth-child(2) {
+    grid-area: status;
+  }
+
+  .gridSection > :nth-child(3) {
+    grid-area: recent;
+
+  }
+}
+
+/* Small screens: vrati na 100% */
+@media (max-width: 799px) {
+  .gridSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+}

@@ -1,0 +1,21 @@
+.container {
+    padding: 2rem;
+    background-color: #f9fafb;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #111827;
+  }
+  
+  .empty {
+    padding: 1rem;
+    font-style: italic;
+    color: #6b7280;
+  }
+  

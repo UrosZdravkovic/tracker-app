@@ -1,0 +1,190 @@
+.form {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* === INPUTS & SELECT === */
+.input,
+.select {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  background-color: #f7f7f8;
+  color: #444;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: #bdbdbd;
+  box-shadow: 0 0 0 2px #ededed;
+  background-color: #f0f0f0;
+}
+
+.inputError {
+  border-color: #e0b4b4 !important;
+  background: #faf0f0;
+}
+
+.errorText {
+  color: #e53935;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+/* === INPUT WITH UNIT INSIDE FIELD === */
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputWrapper .input {
+  padding-right: 3.5rem; /* space for the unit */
+}
+
+.unit {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1rem;
+  pointer-events: none;
+  background: transparent;
+}
+
+/* === BUTTONS === */
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+  box-shadow: none;
+  transition: background 0.2s, transform 0.15s;
+  margin-right: 1rem;
+}
+
+/* === SUBMIT BUTTON === */
+.submitButton {
+  background: #222;
+  color: #fff;
+}
+
+.submitButton:hover {
+  background: #333;
+}
+
+.submitButton:disabled {
+  background: #e5e7eb;
+  color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+/* === CANCEL BUTTON === */
+.cancelButton {
+  background: #e5e7eb;
+  color: #222;
+  margin-right: 0;
+}
+
+.cancelButton:hover {
+  background: #ededed;
+  color: #111;
+}
+
+/* === CUSTOM SELECT === */
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D'14'%20height%3D'8'%20viewBox%3D'0%200%2014%208'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M1%201l6%206%206-6'%20stroke%3D'%23666'%20stroke-width%3D'2'%20fill%3D'none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+  cursor: pointer;
+}
+
+.select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background-color: #f0f7ff;
+}
+
+.select:hover {
+  border-color: #2563eb;
+  background-color: #f3f4f6;
+}
+
+.select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+  background-image: none;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
